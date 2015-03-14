@@ -19,12 +19,7 @@ func (c CantFly) fly() string {
 }
 
 type Animal struct {
-	Name    string
-	Height  float64
-	weight  int
-	favFood string
-	speed   float64
-	sound   string
+	sound string
 
 	flyingType Flys
 }
