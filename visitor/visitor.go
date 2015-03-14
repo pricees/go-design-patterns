@@ -20,7 +20,7 @@ func (t TaxVisitor) visit(v Visitable) float64 {
 		tax = 0.18
 	case Tobacco:
 		tax = 0.32
-	default: // i.e. Necessity
+	default: // e.g. Necessity
 		tax = 0.0
 	}
 
