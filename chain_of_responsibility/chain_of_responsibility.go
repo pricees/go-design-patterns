@@ -39,7 +39,7 @@ func (a AddNumbers) calculate(request Numbers) (float64, error) {
 	}
 
 	if a.nextInChain == nil {
-		return 0, errors.New("Out of chain")
+		return 0, errors.New("chain break")
 	} else {
 		return a.nextInChain.calculate(request)
 	}
@@ -57,7 +57,7 @@ func (s SubtractNumbers) calculate(request Numbers) (float64, error) {
 	}
 
 	if s.nextInChain == nil {
-		return 0, errors.New("Out of chain")
+		return 0, errors.New("chain break")
 	} else {
 		return s.nextInChain.calculate(request)
 	}
@@ -75,7 +75,7 @@ func (m MultiplyNumbers) calculate(request Numbers) (float64, error) {
 	}
 
 	if m.nextInChain == nil {
-		return 0, errors.New("Out of chain")
+		return 0, errors.New("chain break")
 	} else {
 		return m.nextInChain.calculate(request)
 	}
@@ -93,7 +93,7 @@ func (d DivideNumbers) calculate(request Numbers) (float64, error) {
 	}
 
 	if d.nextInChain == nil {
-		return 0, errors.New("Out of Chain")
+		return 0, errors.New("chain break")
 	} else {
 		return d.nextInChain.calculate(request)
 	}
